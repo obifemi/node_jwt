@@ -8,9 +8,13 @@ app.listen(port, () => {
 );
 
 app.get('/', (req, res) => {
-    res.send('Hello World za!');
+    res.render('index');
 }
 );
 
 //middleware for serving static files
 app.use(express.static('public'));
+
+//ejs template engine
+app.set('view engine', 'ejs');
+
