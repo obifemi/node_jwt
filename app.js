@@ -8,6 +8,9 @@ app.listen(port, () => {
 );
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.send('Hello World za!');
 }
 );
+
+//middleware for serving static files
+app.use(express.static('public'));
