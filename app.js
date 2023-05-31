@@ -1,6 +1,13 @@
 import express from 'express';
+import dotenv from 'dotenv';
+import conn from './db.js';
 const app = express();
 const port = 3000;
+
+
+dotenv.config();
+//connection to database
+conn();
 
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
