@@ -12,6 +12,11 @@ app.get('/', (req, res) => {
 }
 );
 
+app.get('/about', (req, res) => {
+    res.render('about');
+}
+);
+
 //middleware for serving static files
 app.use(express.static('public'));
 
