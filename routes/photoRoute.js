@@ -5,9 +5,10 @@ const router = express.Router();
 
 
 //routes
-router
-  .route('/')
-  .post(photoController.createPhoto)
+router.route('/')
+.post(photoController.createPhoto)
+.get(photoController.getPhotos)
+ 
 
 
 export default router;
